@@ -22,8 +22,6 @@ Performed CRUD operation on the all the following tables:
 
 ## To start the application
 
-    - Install by running command
+`pip install -r requirements.txt`
 
-    `pip install -r requirements.txt`
-
-    `python manage.py runserver`
+`python manage.py runserver`
