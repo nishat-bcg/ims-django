@@ -5,13 +5,7 @@ class Supplier(models.Model):
     id = models.BigAutoField(primary_key=True)
     name = models.CharField(max_length=100, null=False)
     address = models.CharField(max_length=250)
-    phone = models.CharField(max_length=14, validators=[
-            RegexValidator(
-            regex=r'^\+?1?\d{9,15}$',
-            message='Invalid phone number!',
-            code='invalid_phone'
-        )]
-    )
+    phone = models.CharField(max_length=14)
     email = models.EmailField()
 
     def __str__(self):

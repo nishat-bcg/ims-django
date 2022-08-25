@@ -11,12 +11,6 @@ from api.serializers.productOrders import ProductOrderSerializer
 
 class ProductOrdersController(APIView):
 
-    def get_product(self, request):
-        try:
-            return Product.objects.filter(id=request.data["product"]).first()
-        except Product.DoesNotExist:
-            raise Http404
-
     def get(self, request):
         qs = ProductOrder.objects.all()
         serializer = ProductOrderSerializer(qs, many=True)

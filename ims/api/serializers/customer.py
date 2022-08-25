@@ -4,7 +4,6 @@ from api.models.customer import Customer
 
 class CustomerSerializer(serializers.ModelSerializer):
     full_name = serializers.SerializerMethodField()
-    group = serializers.StringRelatedField(read_only=True)
     class Meta:
         model = Customer
         fields = '__all__'
